@@ -1,0 +1,19 @@
+name: Payment Service Pipeline
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+
+  build:
+
+    uses: rsy2022p/platform-workflows/.github/workflows/docker-build.yml@main
+
+    with:
+      image-name: payment-service
+      java-version: "17"
+
+    secrets:
+      GHCR_TOKEN: ${{ secrets.GHCR_TOKEN }}
