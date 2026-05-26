@@ -6,9 +6,7 @@ on:
       - main
 
 jobs:
-
   build:
-
     uses: rsy2022p/platform-workflows/.github/workflows/docker-build.yml@main
 
     with:
